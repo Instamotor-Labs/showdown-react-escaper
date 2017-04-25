@@ -42,9 +42,9 @@
           // TODO - this will blow up in node unless we have showdown set globally
           for (var i = 0; i < reactComponents.length; ++i) {
             // handle case with opening / closing tags
-            text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '^\s*?<' + reactComponents[i] + '\\b[^>]*>', '</' + reactComponents[i] + '>', 'gim')
+            text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '^\s*?<' + reactComponents[i] + '\\b[^>]*>', '</' + reactComponents[i] + '>', 'gm')
             // handle self closing tag
-            text = text.replace(new RegExp('^ {0,3}(<' + reactComponents[i] + '.*?/>)', 'gm'),
+            text = text.replace(new RegExp('^\s*?(<' + reactComponents[i] + '.*?/>)', 'gm'),
               function(wholeMatch, m1) {
                 return showdown.subParser('hashElement')(text, options, globals)(wholeMatch, m1.replace(/</, '&lt;').replace(/\s?\/>/, ' /&gt;'))
               })

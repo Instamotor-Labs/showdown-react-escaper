@@ -18,3 +18,7 @@ Some [more](https://google.com) markdown
 <AComponent>
 * awdf
 </AComponent>
+
+<AComponentGoesHere props="123" some="asdf" more="123123" lots="asdfasdf">
+<AnotherComponent />
+</AComponentGoesHere>
