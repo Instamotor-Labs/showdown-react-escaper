@@ -10,3 +10,7 @@ Some markdown
 <AnotherReactComponent someProp="1" anotherProp="2">
 Some [more](https://google.com) markdown
 </AnotherReactComponent>
+
+<ASelfClosingComponent />
+
+<AnotherSelfClosingComponent aProp="1"/>
