@@ -14,3 +14,7 @@ Some [more](https://google.com) markdown
 <ASelfClosingComponent />
 
 <AnotherSelfClosingComponent aProp="1"/>
+
+<AComponent>
+* awdf
+</AComponent>

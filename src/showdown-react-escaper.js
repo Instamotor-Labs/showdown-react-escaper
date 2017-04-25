@@ -20,7 +20,7 @@
     {
       type: 'listener',
       listeners: {
-        'paragraphs.before': function(name, text, converter, options, globals) {
+        'blockGamut.before': function(name, text, converter, options, globals) {
           // basically the code from https://github.com/showdownjs/showdown/blob/master/src/subParsers/hashHTMLBlocks.js
           var reactComponents = []
           // any xml tag that starts with a capital letter, hah!
@@ -42,7 +42,7 @@
           // TODO - this will blow up in node unless we have showdown set globally
           for (var i = 0; i < reactComponents.length; ++i) {
             // handle case with opening / closing tags
-            text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '^ {0,3}<' + reactComponents[i] + '\\b[^>]*>', '</' + reactComponents[i] + '>', 'gim')
+            text = showdown.helper.replaceRecursiveRegExp(text, repFunc, '^\s*?<' + reactComponents[i] + '\\b[^>]*>', '</' + reactComponents[i] + '>', 'gim')
             // handle self closing tag
             text = text.replace(new RegExp('^ {0,3}(<' + reactComponents[i] + '.*?/>)', 'gm'),
               function(wholeMatch, m1) {
