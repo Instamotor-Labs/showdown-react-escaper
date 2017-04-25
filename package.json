@@ -1,0 +1,44 @@
+{
+  "name": "showdown-react-escaper",
+  "version": "0.0.1",
+  "description": "Escape things that look like react components",
+  "keywords": [
+    "markdown",
+    "md",
+    "showdown",
+    "extension"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "license": "MIT",
+  "author": "modosc (http://github.com/modosc)",
+  "main": "./dist/showdown-react-escaper.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Instamotor-Labs/showdown-react-escaper.git",
+    "web": "https://github.com/Instamotor-Labs/showdown-react-escaper"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-conventional-changelog": "^6.1.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-rename": "^0.1.4",
+    "grunt-simple-mocha": "^0.4.0",
+    "grunt-update-json": "^0.2.1",
+    "load-grunt-tasks": "^3.2.0",
+    "mocha": "^3.3.0",
+    "should": "^11.2.1",
+    "source-map-support": "^0.4.14"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "peerDependencies": {
+    "showdown": "^1.6.4"
+  }
+}
